@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Татьяна Савицкая](https://up.htmlacademy.ru/htmlcss/22/user/27850).
-* Наставник: [Анна Пономарёва](https://github.com/EnigmaSn/).
+* Наставник: [Анна Пономарёва](https://htmlacademy.ru/profile/id153610).
 
 ---
 
