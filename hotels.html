@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
-  <body>
 
+  <body>
     <header>
       <nav>
         <a href="/" class="logo">
@@ -15,7 +15,7 @@
           <li><a href="info.html" title="Информация">Информация</a></li>
           <li><a href="media.html" title="Фото и видео">Фото и видео</a></li>
           <li><a href="map.html" title="Карта штата">Карта штата</a></li>
-          <li><a href="hotels.html" title="Гостиницы">Гостиницы</a></li>
+          <li><a title="Гостиницы">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -25,7 +25,7 @@
       <section>
         <form action="/" name="filter">
 
-          <div>
+          <fieldset>
             <p><b>Инфрастуктура:</b></p>
             <ul>
               <li>
@@ -41,9 +41,9 @@
                 <label for="3">WI-FI</label>
               </li>
             </ul>
-          </div>
+          </fieldset>
 
-          <div>
+          <fieldset>
             <p><b>Тип жилья:</b></p>
             <ul>
               <li>
@@ -59,9 +59,9 @@
                 <label for="6">Аппартаменты</label>
               </li>
             </ul>
-          </div>
+          </fieldset>
 
-          <div>
+          <fieldset>
             <p><b>Стоимость в сутки (Р):</b></p>
             <div>
               <div>
@@ -71,115 +71,94 @@
               <div></div>
               <div><input type="submit" value="Показать"></div>
             </div>
-          </div>
-
+          </fieldset>
 
         </form>
       </section>
 
       <section>
-        <table>
+        <div>
+          <p>Найдено: 3</p>
+          <ul>
+            <li>Сортировка:</li>
+            <li><a href="#" title="По цене">По цене</a></li>
+            <li><a href="#" title="По типу">По типу</a></li>
+            <li><a href="#" title="По рейтингу">По рейтингу</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">По возрастанию</a></li>
+            <li><a href="#">По убыванию</a></li>
+          </ul>
+        </div>
 
-          <thead>
-            <tr>
-              <th>
-                <p>Найдено: 3</p>
-              </th>
-              <th>
-                <ul>
-                  <li>Сортировка:</li>
-                  <li><a href="#" title="По цене">По цене</a></li>
-                  <li><a href="#" title="По типу">По типу</a></li>
-                  <li><a href="#" title="По рейтингу">По рейтингу</a></li>
-                </ul>
-              </th>
-              <th>
-                <ul>
-                  <li><button>По возрастанию</button></li>
-                  <li><button>По убыванию</button></li>
-                </ul>
-              </th>
-            </tr>
-          </thead>
+        <div>
+          <div>
+            <img src="http://placehold.it/135x90" />
+          </div>
+          <div>
+            <h3>Amara Resort & Spa</h3>
+            <div>
+              <div>Гостиница</div>
+              <a href="#" title="Подробнее">Подробнее</a>
+            </div>
+            <div>
+              <div>От 4000 Р.</div>
+              <a href="#" title="Забронировать">Забронировать</a>
+            </div>
+          </div>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <p>Рейтинг: 8,5</p>
+        </div>
 
-          <tbody>
-            <tr>
-              <td>
-                <img src="http://placehold.it/135x90" />
-              </td>
-              <td>
-                <p><b>Amara Resort & Spa</b></p>
-                <ul>
-                  <li>Гостиница</li>
-                  <li>От 4000 Р.</li>
-                </ul>
-                <ul>
-                  <li><a href="#" title="Подробнее">Подробнее</a></li>
-                  <li><a href="#" title="Забронировать">Забронировать</a></li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li><img src="star.png" alt=""></li>
-                  <li><img src="star.png" alt=""></li>
-                  <li><img src="star.png" alt=""></li>
-                  <li><img src="star.png" alt=""></li>
-                </ul>
-                <p>Рейтинг: 8,5</p>
-              </td>
-            </tr>
+        <div>
+          <div>
+            <img src="http://placehold.it/135x90" />
+          </div>
+          <div>
+            <h3>Desert Quail Inn</h3>
+            <div>
+              <div>Мотель</div>
+              <a href="#" title="Подробнее">Подробнее</a>
+            </div>
+            <div>
+              <div>От 3000 Р.</div>
+              <a href="#" title="Забронировать">Забронировать</a>
+            </div>
+          </div>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <p>Рейтинг: 8,9</p>
+        </div>
 
-            <tr>
-              <td>
-                <img src="http://placehold.it/135x90" />
-              </td>
-              <td>
-                <p><b>Desert Quail Inn</b></p>
-                <ul>
-                  <li>Мотель</li>
-                  <li>От 3000 Р.</li>
-                </ul>
-                <ul>
-                  <li><a href="#" title="Подробнее">Подробнее</a></li>
-                  <li><a href="#" title="Забронировать">Забронировать</a></li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li><img src="star.png" alt=""></li>
-                  <li><img src="star.png" alt=""></li>
-                  <li><img src="star.png" alt=""></li>
-                </ul>
-                <p>Рейтинг: 8,9</p>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <img src="http://placehold.it/135x90" />
-              </td>
-              <td>
-                <p><b>Villas at Poco Diablo</b></p>
-                <ul>
-                  <li>Аппартаменты</li>
-                  <li>От 2000 Р.</li>
-                </ul>
-                <ul>
-                  <li><a href="#" title="Подробнее">Подробнее</a></li>
-                  <li><a href="#" title="Забронировать">Забронировать</a></li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li><img src="star.png" alt=""></li>
-                  <li><img src="star.png" alt=""></li>
-                </ul>
-                <p>Рейтинг: 9,2</p>
-              </td>
-            </tr>
-          </tbody>
-
-        </table>
+        <div>
+          <div>
+            <img src="http://placehold.it/135x90" />
+          </div>
+          <div>
+            <h3>Villas at Poco Diablo</h3>
+            <div>
+              <div>Аппартаменты</div>
+              <a href="#" title="Подробнее">Подробнее</a>
+            </div>
+            <div>
+              <div>От 2000 Р.</div>
+              <a href="#" title="Забронировать">Забронировать</a>
+            </div>
+          </div>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+          <p>Рейтинг: 9,2</p>
+        </div>
       </section>
 
     </main>
