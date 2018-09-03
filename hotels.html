@@ -9,14 +9,14 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a href="index.html" class="logo-sedona">
+        <a href="index.html" class="logo-sedona" aria-label="На главную">
           <img src="img/logo-sedona.svg" width="140" height="72" alt="City of Sedona">
         </a>
         <ul class="site-navigation">
-          <li><a href="info.html" title="Информация">Информация</a></li>
-          <li><a href="media.html" title="Фото и видео">Фото и видео</a></li>
-          <li><a href="map.html" title="Карта штата">Карта штата</a></li>
-          <li><a title="Гостиницы">Гостиницы</a></li>
+          <li><a href="info.html" aria-label="Информация">Информация</a></li>
+          <li><a href="media.html" aria-label="Фото и видео">Фото и видео</a></li>
+          <li><a href="map.html" aria-label="Карта штата">Карта штата</a></li>
+          <li><a aria-label="Гостиницы">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -24,22 +24,22 @@
     <main class="container">
 
       <section>
-        <form action="/" name="filter">
+        <form class="filter" method="post" action="https://echo.htmlacademy.ru">
 
           <fieldset>
             <b>Инфрастуктура:</b>
             <ul>
               <li>
-                <input type="checkbox" id="1" />
-                <label for="1">Бассейн</label>
+                <input type="checkbox" name="pool" id="filter-pool" checked>
+                <label for="filter-pool">Бассейн</label>
               </li>
               <li>
-                <input type="checkbox" id="2" />
-                <label for="2">Парковка</label>
+                <input type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">Парковка</label>
               </li>
               <li>
-                <input type="checkbox" id="3" />
-                <label for="3">WI-FI</label>
+                <input type="checkbox" name="WI-FI" id="filter-WI-FI">
+                <label for="filter-WI-FI">WI-FI</label>
               </li>
             </ul>
           </fieldset>
@@ -48,16 +48,16 @@
             <b>Тип жилья:</b>
             <ul>
               <li>
-                <input type="checkbox" id="4" />
-                <label for="4">Гостиница</label>
+                <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                <label for="filter-hotel">Гостиница</label>
               </li>
               <li>
-                <input type="checkbox" id="5" />
-                <label for="5">Мотель</label>
+                <input type="checkbox" name="motel" id="filter-motel" checked>
+                <label for="filter-motel">Мотель</label>
               </li>
               <li>
-                <input type="checkbox" id="6" />
-                <label for="6">Аппартаменты</label>
+                <input type="checkbox" name="apartments" id="filter-apartments" checked>
+                <label for="filter-apartments">Аппартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -65,14 +65,17 @@
           <fieldset>
             <b>Стоимость в сутки (Р):</b>
             <div>
-              <div>
-                <div>От 0</div>
-                <div>До 3000</div>
-              </div>
-              <div></div>
-              <div><input type="submit" value="Показать"></div>
+              <p>От 0</p>
+              <p>До 3000</p>
+              <label>
+                <input type="range" min="0" max="3000" name="radio">
+              </label>
             </div>
           </fieldset>
+
+          <div>
+            <button class="button" type="submit" value="Показать">Показать</button>
+          </div>
 
         </form>
       </section>
@@ -170,15 +173,15 @@
       </div>
       <div class="social-footer">
         <ul>
-          <li><a class="social-button" href="#" title="Twitter">Twitter</a></li>
-          <li><a class="social-button" href="#" title="Facebook">Facebook</a></li>
-          <li><a class="social-button" href="#" title="YouTube">YouTube</a></li>
+          <li><a class="social-button" href="#" aria-label="Мы в Twitter">Twitter</a></li>
+          <li><a class="social-button" href="#" aria-label="Мы в Facebook">Facebook</a></li>
+          <li><a class="social-button" href="#" aria-label="Мы в YouTube">YouTube</a></li>
         </ul>
       </div>
       <div>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academia">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academia">
           <span>Website by</span>
-          <img src="logo-htmlacademy.svg" alt="HTML Academia">
+          <!--<img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academia">-->
         </a>
       </div>
     </footer>

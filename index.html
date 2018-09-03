@@ -13,10 +13,10 @@
           <img src="img/logo-sedona.svg" width="140" height="72" alt="City of Sedona">
         </a>
         <ul class="site-navigation">
-          <li><a href="info.html" title="Информация">Информация</a></li>
-          <li><a href="media.html" title="Фото и видео">Фото и видео</a></li>
-          <li><a href="map.html" title="Карта штата">Карта штата</a></li>
-          <li><a href="hotels.html" title="Гостиницы">Гостиницы</a></li>
+          <li><a href="info.html" aria-label="Информация">Информация</a></li>
+          <li><a href="media.html" aria-label="Фото и видео">Фото и видео</a></li>
+          <li><a href="map.html" aria-label="Карта штата">Карта штата</a></li>
+          <li><a href="hotels.html" aria-label="Гостиницы">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -102,33 +102,33 @@
 
         <div>
           <iframe src="img/map.jpg" width="1200" height="594" alt="Карта Седоны">Карта</iframe>
-          <form action="/" name="search">
+          <form class="search" method="post" action="https://echo.htmlacademy.ru">
 
             <p>
               <label for="checkin">Дата заезда</label>
-              <input type="text" id="checkin" name="checkin" />
+              <input type="date" id="checkin" name="checkin">
             </p>
 
             <p>
               <label for="checkout">Дата выезда</label>
-              <input type="text" id="checkout" name="checkout" />
+              <input type="date" id="checkout" name="checkout">
             </p>
 
             <div>
               <label for="adults">Взрослые</label>
-              <div>
-                <button></button>
-                <input type="text" id="adults" name="adults" />
-                <button></button>
-              </div>
+              <p>
+                <button aria-label="-1"></button>
+                <input type="text" id="adults" name="adults">
+                <button aria-label="+1"></button>
+              </p>
               <label for="children">Дети</label>
-              <div>
-                <button></button>
-                <input type="text" id="children" name="children" />
-                <button></button>
-              </div>
+              <p>
+                <button aria-label="-1"></button>
+                <input type="text" id="children" name="children">
+                <button aria-label="+1"></button>
+              </p>
             </div>
-            <input type="submit" value="Найти" />
+            <button type="submit" value="Найти">Найти</button>
 
           </form>
         </div>
@@ -137,18 +137,18 @@
     </main>
 
     <footer class="main-footer">
-      <div>
-        <a href="#">#visitsedona</a>
-      </div>
+      <p>
+        <a href="#" aria-label="#visitsedona">#visitsedona</a>
+      </p>
       <div class="social-footer">
         <ul>
-          <li><a class="social-button" href="#" title="Twitter">Twitter</a></li>
-          <li><a class="social-button" href="#" title="Facebook">Facebook</a></li>
-          <li><a class="social-button" href="#" title="YouTube">YouTube</a></li>
+          <li><a class="social-button" href="#" aria-label="Мы в Twitter">Twitter</a></li>
+          <li><a class="social-button" href="#" aria-label="Мы в Facebook">Facebook</a></li>
+          <li><a class="social-button" href="#" aria-label="Мы в YouTube">YouTube</a></li>
         </ul>
       </div>
       <div>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academia">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academia">
           <span>Website by</span>
           <!--<img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academia">-->
         </a>
