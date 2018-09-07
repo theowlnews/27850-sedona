@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="logo-sedona">
+        <a class="logo-sedona" aria-label="На главную">
           <img src="img/logo-sedona.svg" width="140" height="72" alt="City of Sedona">
         </a>
         <ul class="site-navigation">
@@ -25,6 +27,9 @@
 
       <section class="welcome">
         <h1 class="visually-hidden">Добро пожаловать!</h1>
+        <img src="img/background_sedona.png" width="1200" height="773">
+        <img src="img/welcome-sedona.svg" width="410" height="132" alt="Welcome to the gorgeus Sedona">
+        <img src="img/mask-sedona.svg" alt="design element">
       </section>
 
       <section class="intro">
@@ -34,15 +39,15 @@
       </section>
 
       <section class="main-info">
-        <section class="feature-blue">
-          <div class="feature-blue-text">
+        <section class="first-blue">
+          <div class="first-blue-text">
             <h2>Настоящий городок</h2>
-            <p> &ndash; №1 &ndash; </p>
+            <span>&ndash; №1 &ndash;</span>
             <p>Седона &ndash; не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
 
-          <div class="feature-blue-img">
-            <img src="img/reason-town.jpg" width="800" height="401" alt="Sedona"/>
+          <div class="first-blue-img">
+            <img src="img/reason-town.jpg" width="800" height="401" alt="Настоящий городок">
           </div>
         </section>
 
@@ -64,14 +69,14 @@
           </div>
         </section>
 
-        <section class="feature-blue">
-          <div class="feature-blue-img">
+        <section class="second-blue">
+          <div class="second-blue-img">
             <img src="img/reason-bridge.jpg" width="800" height="400" alt="Sedona">
           </div>
 
-          <div class="feature-blue-text">
+          <div class="second-blue-text">
             <h2>Там есть мост дьявола</h2>
-            <p> &ndash; №2 &ndash; </p>
+            <span>&ndash; №2 &ndash;</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </section>
@@ -79,19 +84,19 @@
         <section class="feature-grey">
           <div class="feature-item">
             <h2>Небольшая площадь</h2>
-            <p> &ndash; №3 &ndash; </p>
+            <span>&ndash; №3 &ndash;</span>
             <p>Все достопримечательности находятся очень близко</p>
           </div>
 
           <div class="feature-item">
             <h2>Красивая дорога</h2>
-            <p> &ndash; №4 &ndash; </p>
+            <span>&ndash; №4 &ndash;</span>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
 
           <div class="feature-item">
             <h2>Мало туристов</h2>
-            <p> &ndash; №5 &ndash; </p>
+            <span>&ndash; №5 &ndash;</span>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </div>
         </section>
@@ -108,30 +113,32 @@
 
         <div>
           <iframe src="img/map.jpg" width="1200" height="594" alt="Карта Седоны">Карта</iframe>
-          <form class="search" method="post" action="https://echo.htmlacademy.ru">
+          <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
 
             <p>
               <label for="checkin">Дата заезда</label>
-              <input type="date" id="checkin" name="checkin">
+              <input type="date" id="checkin" name="checkin-date" placeholder="24 апреля 2017" required>
+              <button class="search-calendar__icon" type="button" name="button">Выбрать дату заезда</button>
             </p>
 
             <p>
               <label for="checkout">Дата выезда</label>
-              <input type="date" id="checkout" name="checkout">
+              <input type="date" id="checkout" name="checkout-date" placeholder="4 июля 2017" required>
+              <button class="search-calendar__icon" type="button" name="button">Выбрать дату выезда</button>
             </p>
 
             <div>
-              <label for="adults">Взрослые</label>
+              <label class="adults" for="adults">Взрослые</label>
               <p>
-                <button aria-label="-1"></button>
-                <input type="text" id="adults" name="adults">
-                <button aria-label="+1"></button>
+                <button class="minus" type="button"><span class="visually-hidden">-</span></button>
+                <input type="text" id="adults" name="adults" placeholder="2">
+                <button class="plus" type="button"><span class="visually-hidden">+</span></button>
               </p>
-              <label for="children">Дети</label>
+              <label class="children" for="children">Дети</label>
               <p>
-                <button aria-label="-1"></button>
-                <input type="text" id="children" name="children">
-                <button aria-label="+1"></button>
+                <button class="minus" type="button"><span class="visually-hidden">-</span></button>
+                <input type="text" id="children" name="children" placeholder="0">
+                <button class="plus" type="button"><span class="visually-hidden">+</span></button>
               </p>
             </div>
             <button type="submit" value="Найти">Найти</button>

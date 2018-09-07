@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
@@ -65,19 +67,22 @@
           </fieldset>
 
           <fieldset>
-            <b>Стоимость в сутки (Р):</b>
-            <div>
-              <p>От 0</p>
-              <p>До 3000</p>
-              <label>
-                <input type="range" min="0" max="3000" name="radio">
-              </label>
+            <div class="filter-range">
+              <div class="filter-range-title">Стоимость в сутки (р):</div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="btn-transparent" type="submit">Показать</button>
             </div>
           </fieldset>
-
-          <div>
-            <button class="button" type="submit" value="Показать">Показать</button>
-          </div>
 
         </form>
       </section>
@@ -172,9 +177,9 @@
     </main>
 
     <footer class="main-footer">
-      <div>
-        <a href="#">#visitsedona</a>
-      </div>
+      <p>
+        <a href="#" aria-label="#visitsedona">#visitsedona</a>
+      </p>
       <div class="social-footer">
         <ul>
           <li><a class="social-button" href="#" aria-label="Мы в Twitter">Twitter</a></li>
