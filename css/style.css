@@ -1,8 +1,387 @@
-.color {
-
-}
-.text {
-  font-family: "PT Sans", sans-serif;
-  font-weight:
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  text-transform: uppercase;
+  background-color: #ededed;
+}
+
+.wrapper {
+  background-color: #fff;
+  max-width: 1200px;
+  min-width: 768px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #81b3d2;
+}
+
+a:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-header {
+  position: relative;
+  z-index: 2;
+}
+
+.main-navigation {
+
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-item {
+  margin: 0;
+  padding: 0;
+  width: 22.7%;
+}
+
+.site-item:nth-child(1),
+.site-item:nth-child(2) {
+  text-align: left;
+}
+
+.site-item:nth-child(3),
+.site-item:nth-child(4) {
+  text-align: right;
+}
+
+.site-item:nth-child(3) {
+  margin-left: auto;
+}
+
+.site-navigation a {
+  font-weight: bold;
+  display: inline-block;
+  height: 56px;
+  padding-top: 17px;
+}
+
+.logo-sedona {
+  width: 140px;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.intro {
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 52px;
+  padding-bottom: 53px;
+}
+
+.intro b {
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.intro p {
+  margin: 0;
+}
+
+.welcome {
+  height: 508px;
+  position: relative;
+  background-image: url(../img/background-sedona.jpg);
+  background-position: center;
+}
+
+.welcome:before {
+  content: '';
+  display: block;
+  height: 353px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 76px;
+  background-image: url(../img/welcome-sedona.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welcome:after {
+  content: '';
+  display: block;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(../img/mask-sedona.svg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.welcome img {
+  font-size: 0;
+  line-height: 0;
+}
+
+.blue {
+  display: flex;
+}
+
+.blue-img {
+  line-height: 0;
+  width: 66.666%;
+  overflow: hidden;
+}
+
+.blue-img img {
+
+}
+
+.blue-text {
+  background-color: #81b3d2;
+  color: #fff;
+  height: 256px;
+  width: 33.333%;
+  display: flex;
+}
+
+.reason {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.reason h2 {
+  font-size: 21px;
+  line-height: 21px;
+  margin: 0 0 23px;
+}
+
+.feature-item .reason h2 {
+  color: #000;
+}
+
+.reason span {
+  display: block;
+  margin-bottom: 21px;
+}
+
+.reason p {
+  margin: 0;
+}
+
+.feature-grey {
+  display: flex;
+  background-color: #eeeeee;
+  height: 256px;
+}
+
+.feature-item {
+  width: 33.333%;
+  display: flex;
+}
+
+.services {
+  text-align: center;
+  display: flex;
+  height: 330px;
+}
+
+.service-item {
+  width: 33.333%;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+}
+
+.service-item-wrapper {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.service-item b {
+  font-size: 21px;
+  line-height: 21px;
+  display: block;
+  color: #000;
+  margin-bottom: 23px;
+  margin-top: 28px;
+}
+
+.service-item p {
+  margin: 0;
+}
+
+.service-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75px;
+  height: 76px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-image-house {
+  background-image: url(../img/house.svg);
+}
+
+.service-image-burger {
+  background-image: url(../img/burger.svg);
+}
+
+.service-image-gift {
+  background-image: url(../img/gift.svg);
+}
+
+.main-footer {
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-hashtag {
+  font-size: 21px;
+  font-weight: bold;
+  width: 33.3%;
+  text-align: center;
+  padding-top: 28px;
+}
+
+.footer-hashtag a {
+
+}
+
+.social-footer {
+  width: 33.3%;
+  display: flex;
+}
+
+.social-footer ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.social-footer li {
+  margin: 0 3px;
+  padding: 0;
+}
+
+a.social-button {
+  width: 48px;
+  height: 48px;
+  display: block;
+  background-color: #81b3d2;
+  padding: 12px;
+}
+
+a.social-button:after {
+  content: '';
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+a.social-button-twitter:after {
+  background-image: url(../img/twitter.svg);
+}
+
+a.social-button-facebook:after {
+  background-image: url(../img/facebook.svg);
+}
+
+a.social-button-youtube:after {
+  background-image: url(../img/youtube.svg);
+}
+
+a.social-button:hover {
+  background-color: #669ec0;
+}
+
+a.social-button:active {
+  background-color: #5496bd;
+  opacity: 1;
+}
+
+a.social-button:active:after {
+  opacity: .3;
+}
+
+.footer-academy {
+  width: 33.3%;
+  display: flex;
+}
+
+.footer-academy a {
+  margin: auto;
+  color: #000;
+}
+
+.footer-academy a:active {
+  opacity: 1;
+}
+
+.footer-academy a:after {
+  content: '';
+  display: inline-block;
+  width: 115px;
+  height: 41px;
+  margin-left: 6px;
+  margin-bottom: -16px;
+  background-image: url(../img/logo-htmlacademy.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-academy a:hover:after {
+  background-image: url(../img/logo-htmlacademy-hover.svg);
+}
+
+.footer-academy a:active:after {
+  background-image: url(../img/logo-htmlacademy-active.svg);
+}
