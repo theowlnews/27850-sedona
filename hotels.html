@@ -19,21 +19,21 @@
             <li class="site-item"><a href="info.html" aria-label="Информация">Информация</a></li>
             <li class="site-item"><a href="media.html" aria-label="Фото и видео">Фото и видео</a></li>
             <li class="site-item"><a href="map.html" aria-label="Карта штата">Карта штата</a></li>
-            <li class="site-item"><a aria-label="Гостиницы">Гостиницы</a></li>
+            <li class="site-item site-item-active"><a aria-label="Гостиницы">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
 
       <main class="container">
 
-        <section>
+        <section class="filter">
           <h1 class="visually-hidden">Бронирование жилья</h1>
           <h2 class="visually-hidden">Фильтр</h2>
-          <form class="filter" method="post" action="https://echo.htmlacademy.ru">
+          <form class="filter-form" method="post" action="https://echo.htmlacademy.ru">
 
-            <fieldset>
+            <fieldset class="filter-fieldset">
               <b>Инфрастуктура:</b>
-              <ul>
+              <ul class="checklist">
                 <li>
                   <input type="checkbox" name="pool" id="filter-pool" checked>
                   <label for="filter-pool">Бассейн</label>
@@ -49,9 +49,9 @@
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter-fieldset">
               <b>Тип жилья:</b>
-              <ul>
+              <ul class="checklist">
                 <li>
                   <input type="checkbox" name="hotel" id="filter-hotel" checked>
                   <label for="filter-hotel">Гостиница</label>
@@ -67,9 +67,9 @@
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter-fieldset">
+              <b>Стоимость в сутки (р):</b>
               <div class="filter-range">
-                <div class="filter-range-title">Стоимость в сутки (р):</div>
                 <div class="price-controls">
                   <label class="min-price">от <input type="text" name="min-price" value="0"></label>
                   <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
@@ -81,97 +81,109 @@
                   <div class="range-toggle range-toggle-min"></div>
                   <div class="range-toggle range-toggle-max"></div>
                 </div>
-                <button class="btn-transparent" type="submit">Показать</button>
+                <button class="filter-submit" type="submit">Показать</button>
               </div>
             </fieldset>
 
           </form>
         </section>
 
-        <section>
-          <div>
-            <p>Найдено: 3</p>
-            <ul>
+        <section class="list">
+          <div class="list-header">
+            <p class="list-found">Найдено: 3</p>
+            <ul class="list-sort">
               <li>Сортировка:</li>
-              <li><a href="#" title="По цене">По цене</a></li>
+              <li class="list-sort-active"><a href="#" title="По цене">По цене</a></li>
               <li><a href="#" title="По типу">По типу</a></li>
               <li><a href="#" title="По рейтингу">По рейтингу</a></li>
             </ul>
-            <ul>
-              <li><a href="#">По возрастанию</a></li>
-              <li><a href="#">По убыванию</a></li>
+            <ul class="list-order">
+              <li class="list-order-dir list-order-dir-up"><a href="#"><span class="visually-hidden">По возрастанию</span></a></li>
+              <li class="list-order-dir list-order-dir-down list-order-dir-active"><a><span class="visually-hidden">По убыванию</span></a></li>
             </ul>
           </div>
 
           <h2 class="visually-hidden">Результат поиска</h2>
 
-          <div>
-            <div>
-              <img src="img/hotel.jpg" width="135" height="90" alt="Amara Resort & Spa">
+          <div class="list-row">
+            <div class="list-image">
+              <a href="#"><img src="img/hotel.jpg" width="135" height="90" alt="Amara Resort & Spa"></a>
             </div>
-            <div>
-              <h3>Amara Resort & Spa</h3>
-              <div>
-                <span>Гостиница</span>
-                <a href="#" title="Подробнее">Подробнее</a>
-              </div>
-              <div>
-                <span>От 4000 Р.</span>
-                <a href="#" title="Забронировать">Забронировать</a>
+            <div class="list-body">
+              <h3 class="list-title"><a href="#">Amara Resort & Spa</a></h3>
+              <div class="list-buttons">
+                <div class="list-button list-button-blue">
+                  <span>Гостиница</span>
+                  <a href="#" title="Подробнее"><span>Подробнее</span></a>
+                </div>
+                <div class="list-button list-button-brown">
+                  <span>От 4000 Р.</span>
+                  <a href="#" title="Забронировать"><span>Забронировать</span></a>
+                </div>
               </div>
             </div>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <p>Рейтинг: 8,5</p>
+            <div class="list-rating">
+              <ul class="list-stars">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <p class="list-rating-value">Рейтинг: 8,5</p>
+            </div>
           </div>
 
-          <div>
-            <div>
-              <img src="img/motel.jpg" width="135" height="90" alt="Desert Quail Inn">
+          <div class="list-row">
+            <div class="list-image">
+              <a href="#"><img src="img/motel.jpg" width="135" height="90" alt="Desert Quail Inn"></a>
             </div>
-            <div>
-              <h3>Desert Quail Inn</h3>
-              <div>
-                <span>Мотель</span>
-                <a href="#" title="Подробнее">Подробнее</a>
-              </div>
-              <div>
-                <span>От 3000 Р.</span>
-                <a href="#" title="Забронировать">Забронировать</a>
+            <div class="list-body">
+              <h3 class="list-title"><a href="#">Desert Quail Inn</a></h3>
+              <div class="list-buttons">
+                <div class="list-button list-button-blue">
+                  <span>Мотель</span>
+                  <a href="#" title="Подробнее"><span>Подробнее</span></a>
+                </div>
+                <div class="list-button list-button-brown">
+                  <span>От 3000 Р.</span>
+                  <a href="#" title="Забронировать"><span>Забронировать</span></a>
+                </div>
               </div>
             </div>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <p>Рейтинг: 8,9</p>
+            <div class="list-rating">
+              <ul class="list-stars">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <p class="list-rating-value">Рейтинг: 8,9</p>
+            </div>
           </div>
 
-          <div>
-            <div>
-              <img src="img/apartments.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+          <div class="list-row">
+            <div class="list-image">
+              <a href="#"><img src="img/apartments.jpg" width="135" height="90" alt="Villas at Poco Diablo"></a>
             </div>
-            <div>
-              <h3>Villas at Poco Diablo</h3>
-              <div>
-                <span>Аппартаменты</span>
-                <a href="#" title="Подробнее">Подробнее</a>
-              </div>
-              <div>
-                <span>От 2000 Р.</span>
-                <a href="#" title="Забронировать">Забронировать</a>
+            <div class="list-body">
+              <h3 class="list-title"><a href="#">Villas at Poco Diablo</a></h3>
+              <div class="list-buttons">
+                <div class="list-button list-button-blue">
+                  <span>Аппартаменты</span>
+                  <a href="#" title="Подробнее"><span>Подробнее</span></a>
+                </div>
+                <div class="list-button list-button-brown">
+                  <span>От 2000 Р.</span>
+                  <a href="#" title="Забронировать"><span>Забронировать</span></a>
+                </div>
               </div>
             </div>
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
-            <p>Рейтинг: 9,2</p>
+            <div class="list-rating">
+              <ul class="list-stars">
+                <li></li>
+                <li></li>
+              </ul>
+              <p class="list-rating-value">Рейтинг: 9,2</p>
+            </div>
           </div>
         </section>
 

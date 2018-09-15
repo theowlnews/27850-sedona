@@ -56,24 +56,21 @@
             <h2 class="visually-hidden">Рекомендации и предложения</h2>
             <div class="service-item">
               <div class="service-item-wrapper">
-                <div class="service-image service-image-house"></div>
-                <b>Жильё</b>
+                <b class="service-heading service-heading-house">Жильё</b>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </div>
             </div>
 
             <div class="service-item">
               <div class="service-item-wrapper">
-                <div class="service-image service-image-burger"></div>
-                <b>Еда</b>
+                <b class="service-heading service-heading-burger">Еда</b>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </div>
             </div>
 
             <div class="service-item">
               <div class="service-item-wrapper">
-                <div class="service-image service-image-gift"></div>
-                <b>Сувениры</b>
+                <b class="service-heading service-heading-gift">Сувениры</b>
                 <p>Не только китайского, но и местного производства!</p>
               </div>
             </div>
@@ -123,43 +120,44 @@
 
         <section class="search">
           <h2 class="visually-hidden">Поиск гостиниц</h2>
-          <div>
+          <div class="search-intro">
             <b>Заинтересовались?</b>
-            <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-            <a href="hotels.html">Поиск гостиницы в Седоне</a>
+            <p>Укажите предполагаемые даты поездки, <br />и мы покажем вам лучшие предложения гостиниц в седоне</p>
+            <a href="hotels.html"><span>Поиск гостиницы в Седоне</span></a>
           </div>
 
-          <div>
-            <iframe src="img/map.jpg" width="1200" height="594" alt="Карта Седоны">Карта</iframe>
+          <div class="search-map-form">
+            <iframe class="search-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81071.81687521872!2d-111.85130884156509!3d34.85198613210557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sby!4v1537003616239" width="100%" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
             <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
 
-              <p>
-                <label for="checkin">Дата заезда</label>
-                <input type="date" id="checkin" name="checkin-date" placeholder="24 апреля 2017" required>
-                <button class="search-calendar__icon" type="button" name="button">Выбрать дату заезда</button>
+              <p class="search-form-row">
+                <label for="checkin">Дата заезда:</label>
+                <input type="date" id="checkin" name="checkin-date" value="24 апреля 2017" required>
+                <button class="search-form-calendar" type="button" name="button"><span class="visually-hidden">Выбрать дату заезда</span></button>
               </p>
 
-              <p>
-                <label for="checkout">Дата выезда</label>
-                <input type="date" id="checkout" name="checkout-date" placeholder="4 июля 2017" required>
-                <button class="search-calendar__icon" type="button" name="button">Выбрать дату выезда</button>
+              <p class="search-form-row">
+                <label for="checkout">Дата выезда:</label>
+                <input type="date" id="checkout" name="checkout-date" value="4 июля 2017" required>
+                <button class="search-form-calendar" type="button" name="button"><span class="visually-hidden">Выбрать дату выезда</span></button>
               </p>
 
-              <div>
-                <label class="adults" for="adults">Взрослые</label>
-                <p>
-                  <button class="minus" type="button"><span class="visually-hidden">-</span></button>
-                  <input type="text" id="adults" name="adults" placeholder="2">
-                  <button class="plus" type="button"><span class="visually-hidden">+</span></button>
-                </p>
-                <label class="children" for="children">Дети</label>
-                <p>
-                  <button class="minus" type="button"><span class="visually-hidden">-</span></button>
-                  <input type="text" id="children" name="children" placeholder="0">
-                  <button class="plus" type="button"><span class="visually-hidden">+</span></button>
-                </p>
-              </div>
-              <button type="submit" value="Найти">Найти</button>
+              <p class="search-form-row">
+                <label class="search-form-adults" for="adults">Взрослые:</label>
+                <span class="search-form-plus-minus">
+                  <button class="search-form-minus" type="button"><span class="visually-hidden">-</span></button>
+                  <input type="text" id="adults" name="adults" value="2">
+                  <button class="search-form-plus" type="button"><span class="visually-hidden">+</span></button>
+                </span>
+                <label class="search-form-children" for="children">Дети:</label>
+                <span class="search-form-plus-minus">
+                  <button class="search-form-minus" type="button"><span class="visually-hidden">-</span></button>
+                  <input type="text" id="children" name="children" value="0">
+                  <button class="search-form-plus" type="button"><span class="visually-hidden">+</span></button>
+                </span>
+              </p>
+
+              <button type="submit" class="search-form-submit" value="Найти"><span>Найти</span></button>
 
             </form>
           </div>
