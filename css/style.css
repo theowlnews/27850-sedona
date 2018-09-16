@@ -299,6 +299,18 @@ a:active {
   width: 568px;
   background-color: #fff;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+  height: 396px;
+  transition: height 1s ease;
+  overflow: hidden;
+}
+
+.search-form-hidden {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+}
+
+.search-form-wrapper {
   padding: 55px;
 }
 
