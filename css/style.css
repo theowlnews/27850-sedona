@@ -861,7 +861,7 @@ a.list-action:active span {
   background-image: url(../img/up-hover.svg);
 }
 
-.list-order-dir-up.list-order-dir-active a,
+.list-order-dir-up-active a,
 .list-order-dir-up a:active {
   background-image: url(../img/up-active.svg);
   opacity: 1;
@@ -876,7 +876,7 @@ a.list-action:active span {
   background-image: url(../img/down-hover.svg);
 }
 
-.list-order-dir-down.list-order-dir-active a,
+.list-order-dir-down-active a,
 .list-order-dir-down a:active {
   background-image: url(../img/down-active.svg);
   opacity: 1;
